@@ -1,0 +1,872 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vipin Dadhich - Developer</title>
+    <meta name="description" content="Portfolio">
+    <meta name="keywords"
+        content="Python, Python Developer, Django Developer, Python Backend Developer, Backend Developer, Developer, Freelancer, Web Developer Freelancer, Web Developer, website, Website Developer">
+    <meta name="author" content="Vipin Dadhich">
+    <meta name="version" content="1.0.0">
+    <!-- favicon -->
+    <link href="{% static 'images/vipin_logo2.png'%}" rel="shortcut icon">
+
+    <!-- Css -->
+    <!-- Main Css -->
+    <link href="{% static 'css/tobii.min.css'%}" rel="stylesheet">
+    <link href="{% static 'css/tiny-slider.css'%}" rel="stylesheet">
+    <link href="{% static 'css/line.css'%}" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/materialdesignicons.min.css'%}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/tailwind.min.css'%}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyETKU8iqlFgD4JmZcJ5pa5CwZ83KS5V9N" crossorigin="anonymous"> -->
+
+    <!-- fab -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="correct-integrity-hash-here" crossorigin="anonymous">
+</head>
+
+<body class="font-poppins text-base text-black dark:text-white dark:bg-slate-900">
+
+    <!-- Loader Start -->
+    <!-- <div id="preloader">
+            <div id="status">
+                <div class="logo">
+                    <img src="assets/images/logo-icon-64.png" class="d-block mx-auto animate-[spin_10s_linear_infinite]" alt="">
+                </div>
+                <div class="justify-content-center">
+                    <div class="text-center">
+                        <h6 class="mb-0 mt-2 text-lg font-semibold">Vipin</h6>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    <!-- Loader End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar" id="navbar">
+        <div class="container flex flex-wrap items-center justify-between">
+            <a class="navbar-brand md:me-8" href="index.html">
+                <!-- <img src="images/logo-dark.png" class="inline-block dark:hidden" alt=""> -->
+                <img src="{% static 'images/vipin_logo2.png' %}" style="width: 80px;" class="inline-block dark:hidden" alt="">
+
+                <!-- <img src="images/logo-light.png" class="hidden dark:inline-block" alt=""> -->
+                <img src="{% static 'images/vipin_logo2.png'%}" style="width: 80px; filter: invert(1);"
+                    class="hidden dark:inline-block" alt="">
+            </a>
+
+            <div class="nav-icons flex items-center lg_992:order-2 ms-auto md:ms-8">
+                <!-- Navbar Button -->
+                <!-- <ul class="list-none menu-social mb-0">
+                        <li class="inline">
+                            <a href="">
+                                <span class="login-btn-primary"><span class="btn btn-icon btn-sm rounded-full bg-amber-500 hover:bg-amber-600 border-amber-500 hover:border-amber-600 text-white"><i class="uil uil-dribbble align-middle"></i></span></span>
+                                <span class="login-btn-light"><span class="btn btn-icon btn-sm rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700"><i class="uil uil-dribbble align-middle"></i></span></span>
+                            </a>
+                            <a href="">
+                                <span class="login-btn-primary"><span class="btn btn-icon btn-sm rounded-full bg-amber-500 hover:bg-amber-600 border-amber-500 hover:border-amber-600 text-white"><i class="uil uil-behance align-middle"></i></span></span>
+                                <span class="login-btn-light"><span class="btn btn-icon btn-sm rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700"><i class="uil uil-behance align-middle"></i></span></span>
+                            </a>
+                            <a href="">
+                                <span class="login-btn-primary"><span class="btn btn-icon btn-sm rounded-full bg-amber-500 hover:bg-amber-600 border-amber-500 hover:border-amber-600 text-white"><i class="uil uil-instagram align-middle"></i></span></span>
+                                <span class="login-btn-light"><span class="btn btn-icon btn-sm rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700"><i class="uil uil-instagram align-middle"></i></span></span>
+                            </a>
+                        </li>
+                    </ul> -->
+                <!-- Navbar Collapse Manu Button -->
+                <button data-collapse="menu-collapse" type="button"
+                    class="collapse-btn inline-flex items-center ms-2 text-dark dark:text-white lg_992:hidden"
+                    aria-controls="menu-collapse" aria-expanded="false">
+                    <span class="sr-only">Navigation Menu</span>
+                    <i class="mdi mdi-menu text-[24px]"></i>
+                </button>
+            </div>
+
+            <!-- Navbar Manu -->
+            <div class="navigation lg_992:order-1 lg_992:flex hidden ms-auto" id="menu-collapse">
+                <ul class="navbar-nav" id="navbar-navlist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#project">Projects</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                            <a class="nav-link" href="#blog">Blogs</a>
+                        </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Start Hero -->
+    <section class="relative pt-28 personal-wrapper overflow-hidden bg-amber-500/5" id="home">
+        <div class="absolute inset-0" id="overlay"></div>
+        <div class="container">
+            <div class="grid md:grid-cols-2 grid-cols-1 items-center gap-[30px]">
+                <div>
+                    <h4 class="font-bold lg:text-[40px] text-3xl lg:leading-normal leading-normal">Hey! I'm <br><span
+                            class="typewrite text-amber-500" data-period="2000" data-type="[ " dennis=""
+                            scott",="" "website="" designer" ,="" "web="" developer" ,="" "ui="" ux="" designer"=""
+                            ]"=""> <span class="wrap"></span> </span> </h4>
+                    <h4 class="font-bold lg:text-[40px] text-3xl lg:leading-normal leading-normal mb-4 text-amber-500">
+                        Vipin Dadhich </h4>
+                    <p class="text-slate-400 max-w-xl">A passionate Python Developer form Rajasthan, India</p>
+
+                    <div class="mt-6">
+                        <a href="#contact"
+                            class="btn bg-amber-500 hover:bg-amber-600 border-amber-500 hover:border-amber-600 text-white rounded-md">Hire
+                            Me</a>
+                        <a href="{% static 'pdf/Vipin-Dadhich-Resume.pdf'%}" target="_blank" rel="noopener noreferrer"
+                            class="btn bg-amber-500/10 hover:bg-amber-500 border-amber-500/10 hover:border-amber-500 text-amber-500 hover:text-white rounded-md ms-1">Download
+                            CV</a>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <img src="{% static 'images/VIPIN.png' %}" alt="">
+                    <!-- <div class="absolute lg:bottom-20 md:bottom-10 bottom-2 ltr:md:-left-5 ltr:left-2 rtl:md:-right-5 rtl:right-2 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 m-3 w-44 text-center">
+                            <span class="text-3xl font-medium mb-0"><span class="counter-value font-bold" data-target="125">1</span>+</span>
+                            <h6 class="text-sm text-slate-400 mt-1">Project Completed</h6>
+                        </div> -->
+
+                    <!-- <div class="absolute lg:top-80 md:top-56 top-48 ltr:md:-right-0 ltr:right-2 rtl:md:-left-0 rtl:left-2 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 m-3 w-44 text-center">
+                            <h6 class="font-semibold">Python Developer</h6>
+                            <h6 class="text-sm text-slate-400 mt-1">2 Years Experience</h6>
+                        </div> -->
+                </div>
+            </div>
+        </div><!--end container-->
+    </section><!--end section-->
+    <div class="relative">
+        <div class="absolute block w-full h-auto bottom-[25px] z-1 left-0">
+            <a href="#about"><i
+                    class="mdi mdi-arrow-down absolute top-0 left-0 right-0 text-center inline-flex items-center justify-center rounded-full bg-white dark:bg-slate-900 h-12 w-12 mx-auto shadow-md dark:shadow-gray-800"></i></a>
+        </div>
+    </div>
+    <!-- End Hero -->
+
+    <!-- Start -->
+    <section class="relative md:py-24 py-16" id="about">
+        <div class="container">
+            <div class="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1 items-center gap-[30px]">
+                <div class="lg:col-span-5 lg:px-8">
+                    <div class="relative">
+                        <div
+                            class="absolute inset-0 border dark:border-gray-800 rounded-full -mt-[10px] -ms-3 h-[100%] w-[100%] -z-1">
+                        </div>
+                        <img src="{% static 'images/VIPIN_2.jpeg' %}"
+                            class="rounded-full shadow-md shadow-gray-200 dark:shadow-gray-800" alt="">
+
+                        <div class="absolute lg:bottom-2 md:bottom-2 bottom-2 ltr:lg:-right-16 rtl:lg:-left-16 ltr:md:-right-8 rtl:md:-left-8 ltr:right-0 rtl:left-0 p-2 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900  w-30 text-center">
+                            <h6 class="font-semibold">Python Developer</h6>
+                            <span class="text-2xl font-medium text-amber-500 mb-0"><span class="counter-value font-bold"
+                                    data-target="2">1</span></span>
+                            <span class="text-sm text-slate-400">Years <br> Experience</span>
+                        </div>
+                    </div>
+                </div><!--end col-->
+
+                <div class="lg:col-span-7">
+                    <div class="lg:ms-5">
+                        <h3 class="mb-6 md:text-2xl text-xl md:leading-normal leading-normal font-semibold">I'm a
+                            Passionate Web Developer</h3>
+
+                        <p class="text-slate-400 max-w-xl text-[15px]">Experienced Python Developer with a strong track
+                            record in creating exceptional user experiences and solving complex problems through code.
+                            Skilled in backend development with 2 years of professional experience. Highly focused on
+                            the experience, logic, architecture, and code quality of projects.</p>
+                        <p class="text-slate-400 max-w-xl text-[15px] mt-6">Check my work for more details.</p>
+
+                        <div class="mt-6">
+                            <a href="#project"
+                                class="btn bg-amber-500/10 hover:bg-amber-500 border-amber-500/10 hover:border-amber-500 text-amber-500 hover:text-white rounded-md me-2 mt-2">See
+                                Work</a>
+                        </div>
+                    </div>
+                </div><!--end grid-->
+            </div><!--end grid-->
+        </div><!--end container-->
+
+        <div class="container md:mt-24 mt-16">
+            <div class="grid grid-cols-1 pb-8 text-center">
+                <h3 class="mb-6 md:text-2xl text-xl md:leading-normal leading-normal font-semibold">Skills</h3>
+
+                <p class="text-slate-400 max-w-xl mx-auto text-[15px]">Throughout my career as a backend developer, I
+                    have developed a variety of valuable skills.</p>
+            </div><!--end grid-->
+
+            <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
+
+                <div
+                    class="flex group shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 items-center p-3 rounded-lg bg-white dark:bg-slate-900">
+                    <div
+                        class="flex items-center justify-center h-[45px] min-w-[45px] -rotate-45 bg-amber-500/10 group-hover:bg-amber-500 text-amber-500 group-hover:text-white text-center rounded-xl me-5 transition-all duration-500">
+                        <i class="fa-brands fa-python h-5 w-5 rotate-45"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="mb-0 text-[17px] font-medium">Python</h4>
+                    </div>
+                </div><!--end content-->
+
+                <div
+                    class="flex group shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 items-center p-3 rounded-lg bg-white dark:bg-slate-900">
+                    <div
+                        class="flex items-center justify-center h-[45px] min-w-[45px] -rotate-45 bg-amber-500/10 group-hover:bg-amber-500 text-amber-500 group-hover:text-white text-center rounded-xl me-5 transition-all duration-500">
+                        <h6 class="strong font-semibold h-5 w-5 rotate-45">Dj</>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="mb-0 text-[17px] font-medium">Django</h4>
+                    </div>
+                </div><!--end content-->
+
+                <div
+                    class="flex group shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 items-center p-3 rounded-lg bg-white dark:bg-slate-900">
+                    <div
+                        class="flex items-center justify-center h-[45px] min-w-[45px] -rotate-45 bg-amber-500/10 group-hover:bg-amber-500 text-amber-500 group-hover:text-white text-center rounded-xl me-5 transition-all duration-500">
+                        <!-- <i data-feather="video" class="h-5 w-5 rotate-45"></i> -->
+                        <i class="fas fa-network-wired h-5 w-5 rotate-45"></i> <!-- Network wired icon for API -->
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="mb-0 text-[17px] font-medium">API</h4>
+                    </div>
+                </div><!--end content-->
+
+                <div
+                    class="flex group shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 items-center p-3 rounded-lg bg-white dark:bg-slate-900">
+                    <div
+                        class="flex items-center justify-center h-[45px] min-w-[45px] -rotate-45 bg-amber-500/10 group-hover:bg-amber-500 text-amber-500 group-hover:text-white text-center rounded-xl me-5 transition-all duration-500">
+                        <!-- <i data-feather="watch" class="h-5 w-5 rotate-45"></i> -->
+                        <i class="fas fa-database h-5 w-5 rotate-45"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="mb-0 text-[17px] font-medium">PostgreSql</h4>
+                    </div>
+                </div><!--end content-->
+
+                <div
+                    class="flex group shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 items-center p-3 rounded-lg bg-white dark:bg-slate-900">
+                    <div
+                        class="flex items-center justify-center h-[45px] min-w-[45px] -rotate-45 bg-amber-500/10 group-hover:bg-amber-500 text-amber-500 group-hover:text-white text-center rounded-xl me-5 transition-all duration-500">
+                        <!-- <i data-feather="coffee" class="h-5 w-5 rotate-45"></i> -->
+                        <i class="fas fa-tasks h-5 w-5 rotate-45"></i> <!-- Tasks icon for Celery -->
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="mb-0 text-[17px] font-medium">Celery</h4>
+                    </div>
+                </div><!--end content-->
+
+                <div
+                    class="flex group shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 items-center p-3 rounded-lg bg-white dark:bg-slate-900">
+                    <div
+                        class="flex items-center justify-center h-[45px] min-w-[45px] -rotate-45 bg-amber-500/10 group-hover:bg-amber-500 text-amber-500 group-hover:text-white text-center rounded-xl me-5 transition-all duration-500">
+                        <!-- <i data-feather="watch" class="h-5 w-5 rotate-45"></i> -->
+                        <i class="fas fa-database h-5 w-5 rotate-45"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="mb-0 text-[17px] font-medium">Redis</h4>
+                    </div>
+                </div><!--end content-->
+
+                <div
+                    class="flex group shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 items-center p-3 rounded-lg bg-white dark:bg-slate-900">
+                    <div
+                        class="flex items-center justify-center h-[45px] min-w-[45px] -rotate-45 bg-amber-500/10 group-hover:bg-amber-500 text-amber-500 group-hover:text-white text-center rounded-xl me-5 transition-all duration-500">
+                        <i class="fab fa-aws h-5 w-5 rotate-45"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="mb-0 text-[17px] font-medium">AWS</h4>
+                    </div>
+                </div><!--end content-->
+
+
+                <div
+                    class="flex group shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 items-center p-3 rounded-lg bg-white dark:bg-slate-900">
+                    <div
+                        class="flex items-center justify-center h-[45px] min-w-[45px] -rotate-45 bg-amber-500/10 group-hover:bg-amber-500 text-amber-500 group-hover:text-white text-center rounded-xl me-5 transition-all duration-500">
+                        <!-- <i data-feather="music" class="h-5 w-5 rotate-45"></i> -->
+                        <i class="fab fa-linux h-5 w-5 rotate-45"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="mb-0 text-[17px] font-medium">Linux</h4>
+                    </div>
+                </div><!--end content-->
+
+
+
+                <div
+                    class="flex group shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 items-center p-3 rounded-lg bg-white dark:bg-slate-900">
+                    <div
+                        class="flex items-center justify-center h-[45px] min-w-[45px] -rotate-45 bg-amber-500/10 group-hover:bg-amber-500 text-amber-500 group-hover:text-white text-center rounded-xl me-5 transition-all duration-500">
+                        <!-- <i data-feather="box" class="h-5 w-5 rotate-45"></i> -->
+                        <i class="fas fa-server h-5 w-5 rotate-45"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="mb-0 text-[17px] font-medium">Nginx</h4>
+                    </div>
+                </div><!--end content-->
+
+                <div
+                    class="flex group shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 items-center p-3 rounded-lg bg-white dark:bg-slate-900">
+                    <div
+                        class="flex items-center justify-center h-[45px] min-w-[45px] -rotate-45 bg-amber-500/10 group-hover:bg-amber-500 text-amber-500 group-hover:text-white text-center rounded-xl me-5 transition-all duration-500">
+                        <!-- <i data-feather="target" class="h-5 w-5 rotate-45"></i> -->
+                        <i class="fas fa-server h-5 w-5 rotate-45"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="mb-0 text-[17px] font-medium">Gunicorn</h4>
+                    </div>
+                </div><!--end content-->
+
+                <div
+                    class="flex group shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 items-center p-3 rounded-lg bg-white dark:bg-slate-900">
+                    <div
+                        class="flex items-center justify-center h-[45px] min-w-[45px] -rotate-45 bg-amber-500/10 group-hover:bg-amber-500 text-amber-500 group-hover:text-white text-center rounded-xl me-5 transition-all duration-500">
+                        <!-- <i data-feather="pen-tool" class="h-5 w-5 rotate-45"></i> -->
+                        <i class="fas fa-server h-5 w-5 rotate-45"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="mb-0 text-[17px] font-medium">UvIcorn</h4>
+                    </div>
+                </div><!--end content-->
+
+                <div
+                    class="flex group shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 items-center p-3 rounded-lg bg-white dark:bg-slate-900">
+                    <div
+                        class="flex items-center justify-center h-[45px] min-w-[45px] -rotate-45 bg-amber-500/10 group-hover:bg-amber-500 text-amber-500 group-hover:text-white text-center rounded-xl me-5 transition-all duration-500">
+                        <!-- <i data-feather="book" class="h-5 w-5 rotate-45"></i> -->
+                        <i class="fas fa-network-wired h-5 w-5 rotate-45"></i>
+
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="mb-0 text-[17px] font-medium">WebSocket</h4>
+                    </div>
+                </div><!--end content-->
+            </div><!--end grid-->
+        </div><!--end container-->
+    </section><!--end section-->
+    <!-- End -->
+
+    <!-- Start -->
+    <section class="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800" id="service">
+        <div class="container">
+            <div class="grid grid-cols-1 pb-8 text-center">
+                <h3 class="mb-6 md:text-2xl text-xl md:leading-normal leading-normal font-semibold">What do i offer?
+                </h3>
+
+                <!-- <p class="text-slate-400 max-w-xl mx-auto text-[15px]">Obviously I'm a Web Designer. Web Developer with over 7 years of experience. Experienced with all stages of the development.</p> -->
+            </div><!--end grid-->
+
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
+                <!-- Content -->
+                <div
+                    class="px-6 py-10 shadow shadow-gray-200 hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 transition duration-500 rounded-2xl bg-white dark:bg-slate-900">
+                    <i data-feather="airplay" class="text-center h-10 w-10 stroke-1 text-amber-500"></i>
+
+                    <div class="content mt-7">
+                        <a href="" class="title h5 text-[17px] font-medium hover:text-amber-500">Consulting and
+                            Strategy</a>
+                        <!-- <p class="text-slate-400 mt-3 text-[15px]">The phrasal sequence of the is now so that many -->
+                            <!-- campaign and benefit</p> -->
+
+                        <!-- <div class="mt-5">
+                                <a href="" class="hover:text-amber-500 dark:hover:text-amber-500 after:bg-amber-500 dark:text-white transition duration-500">Read More <i class="uil uil-arrow-right"></i></a>
+                            </div> -->
+                    </div>
+                </div>
+                <!-- Content -->
+
+                <!-- Content -->
+                <div
+                    class=" px-6 py-10 shadow shadow-gray-200 hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 transition duration-500 rounded-2xl bg-white dark:bg-slate-900">
+                    <i data-feather="airplay" class="h-10 w-10 stroke-1 text-amber-500"></i>
+
+                    <div class="content mt-7">
+                        <a href="" class="title h5 text-[17px] font-medium hover:text-amber-500">Competitor Analysis</a>
+                        <!-- <p class="text-slate-400 mt-3 text-[15px]">The phrasal sequence of the is now so that many -->
+                            <!-- campaign and benefit</p> -->
+
+                        <!-- <div class="mt-5">
+                                <a href="" class="hover:text-amber-500 dark:hover:text-amber-500 after:bg-amber-500 dark:text-white transition duration-500">Read More <i class="uil uil-arrow-right"></i></a>
+                            </div> -->
+                    </div>
+                </div>
+                <!-- Content -->
+
+
+                <!-- Content -->
+                <div
+                    class="px-6 py-10 shadow shadow-gray-200 hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 transition duration-500 rounded-2xl bg-white dark:bg-slate-900">
+                    <i data-feather="airplay" class="h-10 w-10 stroke-1 text-amber-500"></i>
+
+                    <div class="content mt-7">
+                        <a href="" class="title h5 text-[17px] font-medium hover:text-amber-500">Web Hosting and
+                            Deployment</a>
+                        <!-- <p class="text-slate-400 mt-3 text-[15px]">The phrasal sequence of the is now so that many -->
+                            <!-- campaign and benefit</p> -->
+
+                        <!-- <div class="mt-5">
+                                <a href="" class="hover:text-amber-500 dark:hover:text-amber-500 after:bg-amber-500 dark:text-white transition duration-500">Read More <i class="uil uil-arrow-right"></i></a>
+                            </div> -->
+                    </div>
+                </div>
+                <!-- Content -->
+
+                <!-- Content -->
+                <div
+                    class="px-6 py-10 shadow shadow-gray-200 hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 transition duration-500 rounded-2xl bg-white dark:bg-slate-900">
+                    <i data-feather="aperture" class="h-10 w-10 stroke-1 text-amber-500"></i>
+
+                    <div class="content mt-7">
+                        <a href="" class="title h5 text-[17px] font-medium hover:text-amber-500">API Development and
+                            Integration</a>
+                        <!-- <p class="text-slate-400 mt-3 text-[15px]">The phrasal sequence of the is now so that many -->
+                            <!-- campaign and benefit</p> -->
+
+                        <!-- <div class="mt-5">
+                                <a href="" class="hover:text-amber-500 dark:hover:text-amber-500 after:bg-amber-500 dark:text-white transition duration-500">Read More <i class="uil uil-arrow-right"></i></a>
+                            </div> -->
+                    </div>
+                </div>
+                <!-- Content -->
+
+                <!-- Content -->
+                <div
+                    class="px-6 py-10 shadow shadow-gray-200 hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 transition duration-500 rounded-2xl bg-white dark:bg-slate-900">
+                    <i data-feather="camera" class="h-10 w-10 stroke-1 text-amber-500"></i>
+
+                    <div class="content mt-7">
+                        <a href="" class="title h5 text-[17px] font-medium hover:text-amber-500">Custom Web
+                            Applications</a>
+                        <!-- <p class="text-slate-400 mt-3 text-[15px]">The phrasal sequence of the is now so that many -->
+                            <!-- campaign and benefit</p> -->
+
+                        <!-- <div class="mt-5">
+                                <a href="" class="hover:text-amber-500 dark:hover:text-amber-500 after:bg-amber-500 dark:text-white transition duration-500">Read More <i class="uil uil-arrow-right"></i></a>
+                            </div> -->
+                    </div>
+                </div>
+                <!-- Content -->
+
+                <!-- Content -->
+                <div
+                    class="px-6 py-10 shadow shadow-gray-200 hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 transition duration-500 rounded-2xl bg-white dark:bg-slate-900">
+                    <i data-feather="compass" class="h-10 w-10 stroke-1 text-amber-500"></i>
+
+                    <div class="content mt-7">
+                        <a href="" class="title h5 text-[17px] font-medium hover:text-amber-500">Portfolio Websites</a>
+                        <!-- <p class="text-slate-400 mt-3 text-[15px]">The phrasal sequence of the is now so that many -->
+                            <!-- campaign and benefit</p> -->
+
+                        <!-- <div class="mt-5">
+                                <a href="" class="hover:text-amber-500 dark:hover:text-amber-500 after:bg-amber-500 dark:text-white transition duration-500">Read More <i class="uil uil-arrow-right"></i></a>
+                            </div> -->
+                    </div>
+                </div>
+                <!-- Content -->
+
+                <!-- Content -->
+                <div
+                    class="px-6 py-10 shadow shadow-gray-200 hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 transition duration-500 rounded-2xl bg-white dark:bg-slate-900">
+                    <i data-feather="settings" class="h-10 w-10 stroke-1 text-amber-500"></i>
+
+                    <div class="content mt-7">
+                        <a href="" class="title h5 text-[17px] font-medium hover:text-amber-500">CMS Development and
+                            Customization</a>
+                        <!-- <p class="text-slate-400 mt-3 text-[15px]">The phrasal sequence of the is now so that many -->
+                            <!-- campaign and benefit</p> -->
+
+                        <!-- <div class="mt-5">
+                                <a href="" class="hover:text-amber-500 dark:hover:text-amber-500 after:bg-amber-500 dark:text-white transition duration-500">Read More <i class="uil uil-arrow-right"></i></a>
+                            </div> -->
+                    </div>
+                </div>
+                <!-- Content -->
+
+                <!-- Content -->
+                <div
+                    class="px-6 py-10 shadow shadow-gray-200 hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 transition duration-500 rounded-2xl bg-white dark:bg-slate-900">
+                    <i data-feather="watch" class="h-10 w-10 stroke-1 text-amber-500"></i>
+
+                    <div class="content mt-7">
+                        <a href="" class="title h5 text-[17px] font-medium hover:text-amber-500">Web Performance
+                            Optimization</a>
+                        <!-- <p class="text-slate-400 mt-3 text-[15px]">The phrasal sequence of the is now so that many -->
+                            <!-- campaign and benefit</p> -->
+
+                        <!-- <div class="mt-5">
+                                <a href="" class="hover:text-amber-500 dark:hover:text-amber-500 after:bg-amber-500 dark:text-white transition duration-500">Read More <i class="uil uil-arrow-right"></i></a>
+                            </div> -->
+                    </div>
+                </div>
+                <!-- Content -->
+
+                <!-- Content -->
+                <div
+                    class="px-6 py-10 shadow shadow-gray-200 hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 transition duration-500 rounded-2xl bg-white dark:bg-slate-900">
+                    <i data-feather="watch" class="h-10 w-10 stroke-1 text-amber-500"></i>
+
+                    <div class="content mt-7">
+                        <a href="" class="title h5 text-[17px] font-medium hover:text-amber-500">Website Maintenance</a>
+                        <!-- <p class="text-slate-400 mt-3 text-[15px]">The phrasal sequence of the is now so that many -->
+                            <!-- campaign and benefit</p> -->
+
+                        <!-- <div class="mt-5">
+                                <a href="" class="hover:text-amber-500 dark:hover:text-amber-500 after:bg-amber-500 dark:text-white transition duration-500">Read More <i class="uil uil-arrow-right"></i></a>
+                            </div> -->
+                    </div>
+                </div>
+                <!-- Content -->
+            </div>
+        </div><!--end container-->
+    </section><!--end section-->
+    <!-- End -->
+
+    <!-- Start -->
+    <section class="py-20 w-full table relative bg-[url('')] bg-no-repeat bg-center bg-cover">
+        <div class="absolute inset-0 bg-slate-900/70"></div>
+        <div class="container relative">
+            <div class="grid grid-cols-1 pb-8 text-center">
+                <h3 class="mb-4 md:text-2xl text-xl text-white font-semibold">I Am Available For Freelancer Projects.
+                </h3>
+
+                <p class="text-white/80 max-w-xl mx-auto text-[15px]">As a skilled freelancer, I am currently available and actively seeking new projects to work on. If you are looking for someone to help you with your project, feel free to reach out to me. I am confident that I can provide you with high-quality work that exceeds your expectations.</p>
+
+                <div class="relative mt-8">
+                    <a href="#contact"
+                        class="btn bg-amber-500 hover:bg-amber-600 border-amber-500 hover:border-amber-600 text-white rounded-md">Hire
+                        Me</a>
+                </div>
+            </div><!--end grid-->
+        </div><!--end container-->
+    </section><!--end section-->
+    <!-- End -->
+
+    <!-- Start -->
+    <section class="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800" id="experience">
+        <div class="container">
+            <div class="grid grid-cols-1 pb-8 text-center">
+                <h3 class="mb-6 md:text-2xl text-xl md:leading-normal leading-normal font-semibold">Work Experience</h3>
+
+                <!-- <p class="text-slate-400 max-w-xl mx-auto text-[15px]">Obviously I'm a Web Designer. Web Developer with over 7 years of experience. Experienced with all stages of the development.</p> -->
+            </div><!--end grid-->
+
+            <div class="grid grid-cols-1 mt-8">
+                <div
+                    class="relative after:content-[''] after:absolute after:top-0 ltr:md:after:right-0 ltr:md:after:left-0 rtl:md:after:left-0 rtl:md:after:right-0 after:w-px after:h-full md:after:m-auto after:border-s-2 after:border-dashed after:border-gray-200 dark:after:border-gray-700 ms-3 md:ms-0">
+                    <!--Start content-->
+                    <div
+                        class="ms-8 md:ms-0 relative after:content-[''] after:absolute after:top-[9px] after:rounded-full after:z-10 after:w-2.5 after:h-2.5 after:bg-amber-500 md:after:mx-auto ltr:md:after:right-0 ltr:md:after:left-0 rtl:md:after:left-0 rtl:md:after:right-0 ltr:after:-left-9 rtl:after:-right-9 before:content-[''] before:absolute md:before:mx-auto ltr:md:before:right-0 ltr:md:before:left-0 ltr:before:-left-11 rtl:md:before:left-0 rtl:md:before:right-0 rtl:before:-right-11 before:rounded-full before:z-10 before:border-2 before:border-dashed before:border-gray-200 dark:before:border-gray-700 before:top-0 before:w-7 before:h-7 before:bg-white dark:before:bg-slate-900">
+                        <div class="grid md:grid-cols-2">
+                            <div class="md:text-end md:me-8 relative">
+                                <!-- <img src="images/facebook-logo-2019.png" class="rounded-full h-9 w-9 md:ms-auto" alt=""> -->
+                                <h5 class="my-2 font-semibold text-lg">Self Employed</h5>
+                                <h6 class="text-sm mb-0">2023 - Present</h6>
+                            </div>
+
+                            <div class="ltr:float-left rtl:float-right text-start md:ms-8 mt-6 md:mt-0">
+                                <h5 class="title mb-1 font-semibold">Freelancer</h5>
+                                <!-- <p class="mt-3 mb-0 text-slate-400 text-[15px]">The generated injected, or non-characteristic words etc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p> -->
+                                <ul class="work-experiance-ul">
+                                    <li class="mt-3 mb-0 text-slate-400 text-[15px]">Collaborate directly with clients
+                                        to gather project requirements, provide regular updates, and deliver solutions
+                                        that tailored to their specific needs.</li>
+                                    <li class="mt-3 mb-0 text-slate-400 text-[15px]">Conduct competitor analysis to
+                                        identify clients' opportunities for differentiation and growth.</li>
+                                    <li class="mt-3 mb-0 text-slate-400 text-[15px]">Leverage strong problem-solving
+                                        skills to troubleshoot and resolve technical challenges, resulting in seamless
+                                        and functional websites.</li>
+                                    <li class="mt-3 mb-0 text-slate-400 text-[15px]">Demonstrate expertise in
+                                        designing custom WordPress themes and plugins, enhancing website functionality
+                                        and user interactivity.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End content-->
+
+                    <!--Start content-->
+                    <div
+                        class="mt-12 ms-8 md:ms-0 relative after:content-[''] after:absolute after:top-[9px] after:rounded-full after:z-10 after:w-2.5 after:h-2.5 after:bg-amber-500 md:after:mx-auto ltr:md:after:right-0 ltr:md:after:left-0 ltr:after:-left-9 rtl:md:after:left-0 rtl:md:after:right-0 rtl:after:-right-9 before:content-[''] before:absolute md:before:mx-auto ltr:md:before:right-0 ltr:md:before:left-0 ltr:before:-left-11 rtl:md:before:left-0 rtl:md:before:right-0 rtl:before:-right-11 before:rounded-full before:z-10 before:border-2 before:border-dashed before:border-gray-200 dark:before:border-gray-700 before:top-0 before:w-7 before:h-7 before:bg-white dark:before:bg-slate-900">
+                        <div class="grid md:grid-cols-2">
+                            <div class="text-start md:ms-8 relative md:order-2">
+                                <!-- <img src="images/google-logo.png" class="rounded-full h-9 w-9 md:me-auto" alt=""> -->
+                                <h5 class="my-2 font-semibold text-lg">Evc Technology Pvt Ltd.</h5>
+                                <h6 class="text-sm mb-0">2022 – present</h6>
+                            </div>
+
+                            <div class="ltr:float-left rtl:float-right md:text-end md:me-8 mt-6 md:mt-0 md:order-1">
+                                <h5 class="title mb-1 font-semibold">Python/ Django Developer</h5>
+                                <!-- <p class="mt-3 mb-0 text-slate-400 text-[15px]">The generated injected humour, or non-characteristic words etc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p> -->
+                                <ul class="work-experiance-ul">
+                                    <li class="mt-3 mb-0 text-slate-400 text-[15px]">Built the back-end system for
+                                        managing electric vehicle charging station management.</li>
+                                    <li class="mt-3 mb-0 text-slate-400 text-[15px]">Build an Open Charge Point
+                                        Protocol(OCPP) to communicate with the Charging station.</li>
+                                    <li class="mt-3 mb-0 text-slate-400 text-[15px]">Communication with the charger
+                                        happens via WebSocket.</li>
+                                    <li class="mt-3 mb-0 text-slate-400 text-[15px]">REST APIs for mobile application
+                                        and CSMS.</li>
+                                    <li class="mt-3 mb-0 text-slate-400 text-[15px]">Celery task for generating
+                                        periodic reports.</li>
+                                    <li class="mt-3 mb-0 text-slate-400 text-[15px]">Manage Deployment Process.</li>
+                                    <li class="mt-3 mb-0 text-slate-400 text-[15px]">Deployed on EC2 instance with
+                                        Nginx and Gunicorn.</li>
+                                    <li class="mt-3 mb-0 text-slate-400 text-[15px]">White Label Client Setup</li>
+                                    <li class="mt-3 mb-0 text-slate-400 text-[15px]">Cordinate With Clitents and
+                                        handel integration.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End content-->
+                </div>
+            </div><!--end grid-->
+        </div><!--end container-->
+    </section><!--end section-->
+    <!-- End -->
+  
+
+   
+
+
+    <section class="relative md:py-24 py-16" id="project">
+        <div class="container">
+            <div class="grid grid-cols-1 pb-8 text-center">
+                <h3 class="mb-6 md:text-2xl text-xl md:leading-normal leading-normal font-semibold">My Work &amp;
+                    Projects</h3>
+
+                <p class="text-slate-400 max-w-xl mx-auto text-[15px]">I'm a Python Developer with over 2 years of
+                    experience. Experienced with all stages of the development.</p>
+            </div>
+
+            <div id="projectGrid" class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 mt-8 gap-[30px]">
+                {% for project in projects %}
+                    <div class="shadow shadow-gray-200 hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 transition duration-500 rounded-2xl bg-white dark:bg-slate-800">
+                        <a href="#" data-toggle="modal" data-target="#exampleModalCenter{{ project.id }}">
+                            <img  src="{{ project.image.url }}" alt="{{ project.title }}" class="card-image rounded-xl" />
+                        </a>
+                        <div class="p-3">
+                            <h5 class="card-title mt-2">{{ project.title }}</h5>
+                        </div>
+                        <div class="p-3">
+                            <a href="#" data-toggle="modal" data-target="#exampleModalCenter{{ project.id }}" class="btn bg-amber-500 hover:bg-amber-600 border-amber-500 hover:border-amber-600 text-white rounded-md">
+                                Read more <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalCenter{{ project.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle{{ project.id }}" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content shadow shadow-gray-200 hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 transition duration-500 rounded-2xl bg-white dark:bg-slate-900">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle{{ project.id }}">{{ project.title }}</h5>
+                                    <button type="button" class="close text-amber-500" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="{{ project.image.url }}" alt="{{ project.title }}" class="max-w-full h-auto rounded-xl mt-1 mb-3 mx-auto">
+                                    <p class="text-right"><a class="text-amber-500 " href="{{ project.project_url }}" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-eye h-5 w-5"></i> View Project</a></p>
+                                    <hr>
+
+                                    <h5 class="text-amber-500">Client</h5>
+                                    <p>{{ project.client }}</p>
+
+                                    <h5 class="text-amber-500">Description</h5>
+                                    <p>{{ project.description }}</p>
+
+                                    <h5 class="text-amber-500">Responsibilities</h5>
+                                    <ul>
+                                        {% for responsibility in project.responsibilities%}
+                                            <li>{{ responsibility }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+
+  
+
+    <section class="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800" id="contact">
+        <div class="container">
+            <div class="grid grid-cols-1 pb-8 text-center">
+                <h3 class="mb-6 md:text-2xl text-xl md:leading-normal leading-normal font-semibold">Get In Touch !</h3>
+            </div><!--end grid-->
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 mt-8 items-center gap-[30px]">
+                <div class="lg:col-span-8">
+                    <div class="p-6 rounded-md shadow bg-white dark:bg-slate-900">
+                        <form method="post" action="{% url 'contact_form' %}" name="myForm" id="myForm">
+                            {% csrf_token %}
+                            <p class="mb-0" id="error-msg"></p>
+                            <div id="simple-msg"></div>
+                            <div class="grid lg:grid-cols-12 lg:gap-5">
+                                <div class="lg:col-span-6 mb-5">
+                                    <input name="name" id="name" type="text"
+                                        class="form-input w-full py-2 px-3 border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded h-10 outline-none bg-transparent focus:border-amber-500/50 dark:focus:border-amber-500/50 focus:shadow-none focus:ring-0 text-[15px]"
+                                        placeholder="Name :">
+                                </div>
+
+                                <div class="lg:col-span-6 mb-5">
+                                    <input name="email" id="email" type="email"
+                                        class="form-input w-full py-2 px-3 border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded h-10 outline-none bg-transparent focus:border-amber-500/50 dark:focus:border-amber-500/50 focus:shadow-none focus:ring-0 text-[15px]"
+                                        placeholder="Email :">
+                                </div><!--end col-->
+                            </div>
+
+                            <div class="grid grid-cols-1">
+                                <div class="mb-5">
+                                    <input name="subject" id="subject"
+                                        class="form-input w-full py-2 px-3 border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded h-10 outline-none bg-transparent focus:border-amber-500/50 dark:focus:border-amber-500/50 focus:shadow-none focus:ring-0 text-[15px]"
+                                        placeholder="Subject :">
+                                </div>
+
+                                <div class="mb-5">
+                                    <textarea name="comments" id="comments"
+                                        class="form-input w-full py-2 px-3 border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded h-28 outline-none bg-transparent focus:border-amber-500/50 dark:focus:border-amber-500/50 focus:shadow-none focus:ring-0 text-[15px]"
+                                        placeholder="Message :"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" id="submit" name="send"
+                                class="btn bg-amber-500 hover:bg-amber-600 border-amber-500 hover:border-amber-600 text-white rounded-md h-11 justify-center flex items-center">Send
+                                Message</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-4   ">
+                    <div class="lg:ms-8">
+                        <div class="flex mt-4">
+                            <div class="icons text-center mx-auto">
+                                <i class="uil uil-envelope block rounded text-2xl dark:text-white mb-0"></i>
+                            </div>
+
+                            <div class="flex-1 ms-6">
+                                <h5 class="text-[17px] dark:text-white mb-2 font-medium">Email</h5>
+                                <a href="mailto:vipin11dadhich@gmail.com"
+                                    class="text-slate-400 text-[15px]">vipin11dadhich@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex mt-4">
+                            <div class="icons text-center mx-auto">
+                                <i class="uil uil-map-marker block rounded text-2xl dark:text-white mb-0"></i>
+                            </div>
+
+                            <div class="flex-1 ms-6">
+                                <h5 class="text-[17px] dark:text-white mb-2 font-medium">Location</h5>
+                                <p class="text-slate-400 text-[15px] mb-2">Jaipur, Rajasthan, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--end grid-->
+        </div><!--end container-->
+    </section><!--end section-->
+    <!-- End -->
+
+    <!-- Footer Start -->
+    <footer class="footer bg-dark-footer relative text-gray-200 dark:text-gray-200">
+        <div class="py-[30px] px-0 border-t border-slate-800">
+            <div class="container text-center">
+                <div class="grid lg:grid-cols-12 md:grid-cols-3 grid-cols-1 items-center">
+                    <div class="lg:col-span-3 md:text-start text-center">
+                        <a href="#" class="text-[22px] focus:outline-none">
+                            <img src="{% static 'images/vipin_logo2.png'%}" style="width: 80px; filter: invert(1);"
+                                class="mx-auto md:me-auto md:ms-0" alt="">
+                        </a>
+                    </div>
+
+                    <div class="lg:col-span-5 text-center mt-6 md:mt-0">
+                        <p class="mb-0">©
+                            <script>document.write(new Date().getFullYear())</script> - Vipin | Design with <i
+                                class="mdi mdi-heart text-red-600"></i> by <a href="https://shreethemes.in/"
+                                target="_blank" class="text-reset">Vipin</a>.
+                        </p>
+                    </div>
+
+                    <ul class="lg:col-span-4 list-none md:text-end text-center mt-6 md:mt-0">
+                        <li class="inline"><a href="https://www.linkedin.com/in/vipin-dadhich" target="_blank"
+                                class="btn btn-icon btn-sm  rounded-md hover:border-amber-500 bg-amber-500"><i
+                                    class="uil uil-linkedin" title="Linkedin"></i></a></li>
+                        <li class="inline"><a href="https://github.com/DadhichVipin" target="_blank"
+                                class="btn btn-icon btn-sm  rounded-md hover:border-amber-500 bg-amber-500"><i
+                                    class="uil uil-github" title="GitHub"></i></a></li>
+                        <li class="inline"><a href="https://www.instagram.com/dadhich.vip.in/" target="_blank"
+                                class="btn btn-icon btn-sm  rounded-md hover:border-amber-500 bg-amber-500"><i
+                                    class="uil uil-instagram align-middle" title="instagram"></i></a></li>
+                        <li class="inline"><a href="mailto:vipin11dadhich@gmail.com"
+                                class="btn btn-icon btn-sm  rounded-md hover:border-amber-500 bg-amber-500"><i
+                                    class="uil uil-envelope align-middle" title="email"></i></a></li>
+                    </ul><!--end icon-->
+                </div><!--end grid-->
+            </div><!--end container-->
+        </div>
+    </footer><!--end footer-->
+    <!-- Footer End -->
+
+    <!-- Back to top -->
+    <a href="#" onclick="topFunction()" id="back-to-top"
+        class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 right-5 h-9 w-9 text-center bg-amber-500 text-white leading-9"><i
+            class="uil uil-arrow-up"></i></a>
+    <!-- Back to top -->
+
+    <!-- Switcher -->
+    <div class="fixed top-1/4 -right-1 z-3">
+        <span class="relative inline-block rotate-90">
+            <input type="checkbox" class="checkbox opacity-0 absolute" id="chk">
+            <label
+                class="label bg-slate-900 dark:bg-white shadow dark:shadow-gray-800 cursor-pointer rounded-full flex justify-between items-center p-1 w-14 h-8"
+                for="chk">
+                <i class="uil uil-moon text-[20px] text-yellow-500"></i>
+                <i class="uil uil-sun text-[20px] text-yellow-500"></i>
+                <span class="ball bg-white dark:bg-slate-900 rounded-full absolute top-[2px] left-[2px] w-7 h-7"></span>
+            </label>
+        </span>
+    </div>
+    <!-- Switcher -->
+
+    <!-- JAVASCRIPTS -->
+    <script src="{% static 'js/feather.min.js' %}"></script>
+    <script src="{% static 'js/gumshoe.polyfills.min.js' %}"></script>
+    <script src="{% static 'js/tobii.min.js' %}"></script>
+    <script src="{% static 'js/tiny-slider.js' %}"></script>
+    <script src="{% static 'js/plugins.init.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+    <!-- JAVASCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      
+</body>
+
+</html>
+
